@@ -1,1 +1,2 @@
 DEBUG=False
+SECRET_KEY=set your secret key
