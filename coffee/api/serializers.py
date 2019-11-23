@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from coffee.api.models import Harvest, Stock, Farm
+from coffee.api.models import Harvest, Stock
 
 
 class HarvestSerializer(serializers.ModelSerializer):
@@ -12,10 +12,4 @@ class HarvestSerializer(serializers.ModelSerializer):
 class StockSerializer(serializers.ModelSerializer):
     class Meta:
         model = Stock
-        fields = '__all__'
-
-
-class FarmSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Farm
         fields = '__all__'

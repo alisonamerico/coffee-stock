@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from coffee.api.models import Harvest, Stock, Farm
-from coffee.api.serializers import HarvestSerializer, StockSerializer, FarmSerializer
+from coffee.api.models import Harvest, Stock
+from coffee.api.serializers import HarvestSerializer, StockSerializer
 
 
 class HarvestViewSet(viewsets.ModelViewSet):
@@ -12,8 +12,3 @@ class HarvestViewSet(viewsets.ModelViewSet):
 class StockViewSet(viewsets.ModelViewSet):
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
-
-
-class FarmViewSet(viewsets.ModelViewSet):
-    queryset = Farm.objects.all()
-    serializer_class = FarmSerializer
