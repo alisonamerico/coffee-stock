@@ -3,7 +3,7 @@ from django.test import Client
 
 def test_status_code(client: Client):
     resp = client.get('/api/')
-    assert resp.status_code == 200
+    assert resp.status_code == 403
 
 # def test_view_status_code(client: Client, user):
 #     username = 'foo'
