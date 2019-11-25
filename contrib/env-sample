@@ -1,8 +1,4 @@
 DEBUG=False
 SECRET_KEY=set your secret key
 ALLOWED_HOSTS=127.0.0.1, localhost
-ENGINE=django.db.backends.postgresql
-NAME=postgres
-USER=postgres
-HOST=db
-PORT=5432
+DATABASE=postgres://postgres:postgres@localhost/testdb

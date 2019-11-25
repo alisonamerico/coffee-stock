@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-# from functools import partial
+from functools import partial
 
-# import dj_database_url
+import dj_database_url
 from decouple import config, Csv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -43,9 +43,33 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'coffee.api',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'corsheaders',
+
+
 ]
 
+# CONFIG. REST_FRAMEWORK
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
+}
+
+REST_USE_JWT = True
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8000',
+)
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -79,24 +103,24 @@ WSGI_APPLICATION = 'coffee.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': config('ENGINE'),
-        'NAME': config('NAME'),
-        'USER': config('USER'),
-        'HOST': config('HOST'),  # set in docker-compose.yml
-        'PORT': config('PORT')  # default postgres port
-    }
-}
-
-
-# default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-#
-# parse_database = partial(dj_database_url.parse, conn_max_age=600)
-#
 # DATABASES = {
-#    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
+#     'default': {
+#         'ENGINE': config('ENGINE'),
+#         'NAME': config('NAME'),
+#         'USER': config('USER'),
+#         'HOST': config('HOST'),  # set in docker-compose.yml
+#         'PORT': config('PORT')  # default postgres port
+#     }
 # }
+
+
+default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+
+parse_database = partial(dj_database_url.parse, conn_max_age=600)
+
+DATABASES = {
+   'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
+}
 
 
 # Password validation
