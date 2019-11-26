@@ -6,12 +6,6 @@ services:
     image: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - LC_ALL=C.UTF-8
-      - POSTGRES_USER=hotcoffee
-      - POSTGRES_PASSWORD=hotcoffee
-    ports:
-      - 5434:5432
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000

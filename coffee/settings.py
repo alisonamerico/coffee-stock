@@ -29,6 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
+# set allowed domains
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
@@ -63,6 +64,7 @@ REST_FRAMEWORK = {
 }
 
 REST_USE_JWT = True
+
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8000',
@@ -102,17 +104,6 @@ WSGI_APPLICATION = 'coffee.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': config('ENGINE'),
-#         'NAME': config('NAME'),
-#         'USER': config('USER'),
-#         'HOST': config('HOST'),  # set in docker-compose.yml
-#         'PORT': config('PORT')  # default postgres port
-#     }
-# }
-
 
 default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
@@ -159,4 +150,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATIC_ROOT = '/static'
 STATIC_URL = '/static/'
