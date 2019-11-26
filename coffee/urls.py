@@ -16,6 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+"""
+ - path('rest-auth/', include('rest_auth.urls')),
+
+Django-rest-auth library provides a set of REST API endpoints for registration, authentication
+(including social media authentication), password reset, retrieve and update user details, etc.
+By having these API endpoints, your client apps such as AngularJS, iOS, Android, and others can
+communicate to your Django backend site independently via REST APIs for user management.
+"""
 
 urlpatterns = [
     path('admin/', admin.site.urls),
