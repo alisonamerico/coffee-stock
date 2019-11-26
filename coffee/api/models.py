@@ -37,8 +37,8 @@ class Stock(models.Model):
     """
     harvest = models.ForeignKey(Harvest, on_delete=models.CASCADE)
     stock_name = models.CharField(max_length=100)
-    cafes_types = ArrayField(models.CharField(max_length=150), default=list)
-    coffee_farms = ArrayField(models.CharField(max_length=150), default=list)
+    cafes_types = ArrayField(models.CharField(max_length=150))
+    coffee_farms = ArrayField(models.CharField(max_length=150))
     quantity_bags_available = models.IntegerField()
     stock_capability = models.IntegerField()
 
