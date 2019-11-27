@@ -3,7 +3,12 @@ API that allows you to control different stocks of coffees.
 
 ![coffee](coffee.jpg)
 
-Application available at https://coffee-stock.herokuapp.com/api/
+Application available at:
+
+https://coffe-stock.herokuapp.com/rest-auth/login/ 
+
+https://coffe-stock.herokuapp.com/api/
+
 
 [![Python 3](https://pyup.io/repos/github/alisonamerico/coffee-stock/python-3-shield.svg)](https://pyup.io/repos/github/alisonamerico/coffee-stock/)
 [![Updates](https://pyup.io/repos/github/alisonamerico/coffee-stock/shield.svg)](https://pyup.io/repos/github/alisonamerico/coffee-stock/)
