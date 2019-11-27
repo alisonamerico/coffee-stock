@@ -31,6 +31,3 @@ def extract_and_parse_json(response):
     s = response.content.decode(response.charset)
     dct = json.loads(s)
     return dct
-
-
-
