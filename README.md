@@ -1,6 +1,8 @@
 # coffee-stock
 API that allows you to control different stocks of coffees.
-![alt text](coffee-stock/coffee.jpg)
+
+![coffee](coffee.jpg)
+
 Application available at https://coffee-stock.herokuapp.com/api/
 
 [![Python 3](https://pyup.io/repos/github/alisonamerico/coffee-stock/python-3-shield.svg)](https://pyup.io/repos/github/alisonamerico/coffee-stock/)
@@ -12,15 +14,15 @@ Processes used in project development:
 
 Continuous Delivery:
 
-    Integration with Pipenv Travis and Pyup
+ - Integration with Pipenv Travis and Pyup
 
-    Automatic Deploy
+ - Automatic Deploy
 
-    Pytest: To set up and build automated tests for Django.
+ - Pytest: To set up and build automated tests for Django.
 
-    Codecov: For Test Coverage
+ - Codecov: For Test Coverage
 
-    python-decouple: To decouple application instance settings.
+ - python-decouple: To decouple application instance settings.
 
 
 How to install locally:
@@ -63,10 +65,11 @@ docker-compose run web python manage.py createsuperuser
 ```
 
 Inform:
+```shell script
  - username
  - email
  - password
-
+```
 
 We’re finally ready to run Docker itself! 
 The first time you execute the command might take a while as Docker has to download all the required content.
@@ -86,10 +89,12 @@ http://0.0.0.0:8000/api/harvest
 http://0.0.0.0:8000/api/stock
 ```
 Note: But to view, you must first have:
+```shell script
  - username
  - email
  - password
- 
+```
+
 which generates a token.
 
 url to login:
@@ -100,4 +105,9 @@ http://0.0.0.0:8000/rest-auth/login/
 When you’re done, don’t forget to close down your Docker container.
 ```shell script
 docker-compose down
+```
+
+Run the tests:
+```shell script
+pytest coffee --cov=coffee
 ```
