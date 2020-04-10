@@ -197,11 +197,10 @@
         },
         "docker-compose": {
             "hashes": [
-                "sha256:2c5fcbfd3ff445b6f3eebb549cb167ef1d8f70c5806aab8f309fc8fa74cd977e",
-                "sha256:f21d8edb885da3c67292a2423f4282eaaaae6466d7c08919288db64280fc860d"
+                "sha256:7a2eb6d8173fdf408e505e6f7d497ac0b777388719542be9e49a0efd477a50c6",
+                "sha256:9d33520ae976f524968a64226516ec631dce09fba0974ce5366ad403e203eb5d"
             ],
-            "index": "pypi",
-            "version": "==1.25.0"
+            "version": "==1.25.5"
         },
         "dockerpty": {
             "hashes": [
