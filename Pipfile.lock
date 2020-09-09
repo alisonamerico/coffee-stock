@@ -317,9 +317,9 @@
         },
         "pyrsistent": {
             "hashes": [
-                "sha256:28669905fe725965daa16184933676547c5bb40a5153055a8dee2a4bd7933ad3"
+                "sha256:f40b7693b872ef21cabb14661062687af6f77a9d6fcfdff89708a3c7ebab704e"
             ],
-            "version": "==0.16.0"
+            "version": "==0.17.1"
         },
         "python-decouple": {
             "hashes": [
