@@ -196,15 +196,11 @@
             "version": "==1.11.0"
         },
         "docker": {
-            "extras": [
-                "ssh"
-            ],
             "hashes": [
-                "sha256:13966471e8bc23b36bfb3a6fb4ab75043a5ef1dac86516274777576bed3b9828",
-                "sha256:bad94b8dd001a8a4af19ce4becc17f41b09f228173ffe6a4e0355389eef142f2"
+                "sha256:20d71afc593486f2297bb7fb7406b03876f31894337e914a5062050c65085cab",
+                "sha256:67f33d4cf95182db631a17eef7d666d2c91f624c1d3fbc4df6009cb2f2a4c604"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
-            "version": "==4.3.1"
+            "version": "==4.4.2"
         },
         "docker-compose": {
             "hashes": [
