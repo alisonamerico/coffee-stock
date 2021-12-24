@@ -251,10 +251,10 @@
         },
         "paramiko": {
             "hashes": [
-                "sha256:4f3e316fef2ac628b05097a637af35685183111d4bc1b5979bd397c2ab7b5898",
-                "sha256:7f36f4ba2c0d81d219f4595e35f70d56cc94f9ac40a6acdf51d6ca210ce65035"
+                "sha256:23ed3fd86989d55dc80c246585d4fb97e775265ffbd05ce86d8902ba07cfa65d",
+                "sha256:398a76c5f50de9a7ea6ca53c7ea4111b699dbc49cb13eeb1ae352f926639e743"
             ],
-            "version": "==2.7.2"
+            "version": "==2.9.0"
         },
         "psycopg2-binary": {
             "hashes": [
